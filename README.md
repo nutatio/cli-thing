@@ -1,7 +1,7 @@
 usage:
 `go build -o build/app && ./build/app`
 
-takes "input.json", which is array of jsons
+takes `input.json`, which is array of jsons
 
 ```json
 {
@@ -17,7 +17,8 @@ takes "input.json", which is array of jsons
 }
 
 ```
-Types 
+Types: 
+
 - 0 - create file
 - 1 - change filename 
 - 2 - delete file 

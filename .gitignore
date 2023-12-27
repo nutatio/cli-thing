@@ -2,3 +2,5 @@ ignorefolder
 build
 makefile
 cleaner.go
+bar.txt
+barbar.txt
