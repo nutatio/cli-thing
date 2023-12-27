@@ -1,0 +1,5 @@
+ignorefolder
+build
+makefile
+input.json
+cleaner.go
