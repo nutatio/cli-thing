@@ -1,0 +1,90 @@
+[
+    {
+        "type": 0,
+        "name": "create foo.txt",
+        "result": "Created file foo.txt",
+        "params": {
+            "file_name": "foo.txt",
+            "new_file_name": "",
+            "message": "",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 1,
+        "name": "change foo.txt to bar.txt",
+        "result": "Renamed foo.txt to bar.txt",
+        "params": {
+            "file_name": "foo.txt",
+            "new_file_name": "bar.txt",
+            "message": "",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 3,
+        "name": "get bar.txt creation time and date",
+        "result": "created at: 2023-12-27 17:23:17.407656182 +0400 +04",
+        "params": {
+            "file_name": "bar.txt",
+            "new_file_name": "",
+            "message": "",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 4,
+        "name": "write message to bar.txt",
+        "result": "Write message to bar.txt",
+        "params": {
+            "file_name": "bar.txt",
+            "new_file_name": "",
+            "message": "test ;ousafhgphuj4wp4t[guhp45uhypuhq\n454tuh45pityuhpiuh45ghpiuh",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 4,
+        "name": "write message to babar.txt",
+        "result": "Write message to babar.txt",
+        "params": {
+            "file_name": "babar.txt",
+            "new_file_name": "",
+            "message": "test ;ousafhgphuj4wp4t[guhp45uhypuhq\n454tuh45pityuhpiuh45ghpiuh",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 5,
+        "name": "compare date",
+        "result": "",
+        "params": {
+            "file_name": "makefile",
+            "new_file_name": "",
+            "message": "",
+            "compare_date": "2024-12-27 15:30:00 +0400"
+        }
+    },
+    {
+        "type": 2,
+        "name": "delete bar.txt",
+        "result": "File bar.txt successfully deleted",
+        "params": {
+            "file_name": "bar.txt",
+            "new_file_name": "",
+            "message": "",
+            "compare_date": ""
+        }
+    },
+    {
+        "type": 2,
+        "name": "delete babar.txt",
+        "result": "",
+        "params": {
+            "file_name": "babar.txt",
+            "new_file_name": "",
+            "message": "",
+            "compare_date": ""
+        }
+    }
+]
