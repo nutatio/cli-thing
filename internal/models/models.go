@@ -38,6 +38,42 @@ type param struct {
 }
 type CivilTime time.Time
 
+func HandleActions(actions []Action) []Action {
+	corruptedSet := make(map[int]struct{}, 0)
+	for i := range actions {
+		_, ok := corruptedSet[i]
+		if ok {
+			continue
+		}
+		switch actions[i].Type {
+		case CreateFile:
+			actions[i].CreateFile()
+		case ChangeFileName:
+			actions[i].ChangeFileName()
+		case DeleteFile:
+			actions[i].DeleteFile()
+		case GetFileDate:
+			actions[i].GetFileDate()
+		case WriteToFile:
+			actions[i].WriteToFile()
+		case DateMoreThan:
+			isMoreThan, err := actions[i].DateMoreThan()
+			if err != nil {
+				actions[i].Result = fmt.Sprintf("could not compare: %v", err.Error())
+				corruptedSet[i+1] = struct{}{}
+				corruptedSet[i+2] = struct{}{}
+			}
+			if isMoreThan {
+				corruptedSet[i+2] = struct{}{}
+				continue
+			}
+			corruptedSet[i+1] = struct{}{}
+
+		}
+	}
+
+	return actions
+}
 func (a *Action) CreateFile() {
 	fName := a.Params.FileName
 	f, err := os.Create(fName)
@@ -93,9 +129,6 @@ func (a *Action) WriteToFile() {
 	}
 	a.Result = fmt.Sprintf("Write message to %v", fName)
 }
-
-//if time is more then next + depricate next if less then next next
-//TODO
 
 func (a *Action) DateMoreThan() (bool, error) {
 	const layout = "2006-01-02 15:04:05 -0700"

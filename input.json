@@ -2,7 +2,7 @@
     {
         "type": 0,
         "name": "create foo.txt",
-        "result": "Created file foo.txt",
+        "result": "",
         "params": {
             "file_name": "foo.txt",
             "new_file_name": "",
@@ -13,7 +13,7 @@
     {
         "type": 1,
         "name": "change foo.txt to bar.txt",
-        "result": "Renamed foo.txt to bar.txt",
+        "result": "",
         "params": {
             "file_name": "foo.txt",
             "new_file_name": "bar.txt",
@@ -24,7 +24,7 @@
     {
         "type": 3,
         "name": "get bar.txt creation time and date",
-        "result": "created at: 2023-12-27 17:23:17.407656182 +0400 +04",
+        "result": "",
         "params": {
             "file_name": "bar.txt",
             "new_file_name": "",
@@ -35,7 +35,7 @@
     {
         "type": 4,
         "name": "write message to bar.txt",
-        "result": "Write message to bar.txt",
+        "result": "",
         "params": {
             "file_name": "bar.txt",
             "new_file_name": "",
@@ -46,7 +46,7 @@
     {
         "type": 4,
         "name": "write message to babar.txt",
-        "result": "Write message to babar.txt",
+        "result": "",
         "params": {
             "file_name": "babar.txt",
             "new_file_name": "",
@@ -68,7 +68,7 @@
     {
         "type": 2,
         "name": "delete bar.txt",
-        "result": "File bar.txt successfully deleted",
+        "result": "",
         "params": {
             "file_name": "bar.txt",
             "new_file_name": "",
